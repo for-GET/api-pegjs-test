@@ -1,0 +1,14 @@
+var1 = test;
+var2 = test2;
+
+state1,
+state2
+: states;
+
+msg
+: messages;
+
+act
+: actions;
+
+state1:msg -> state2:act;

@@ -1,0 +1,32 @@
+[
+  [
+    "Generic",
+    "Thu, 06 May 2013 15:15:24 GMT",
+    {
+      "__type": "Date",
+      "date": [
+        {
+          "__type": "HTTP_date",
+          "value": [
+            {
+              "__type": "IMF_fixdate",
+              "day_name": "Thu",
+              "date": {
+                "__type": "date1",
+                "day": "06",
+                "month": "May",
+                "year": "2013"
+              },
+              "time_of_day": {
+                "__type": "time_of_day",
+                "hour": "15",
+                "minute": "15",
+                "second": "24"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+]

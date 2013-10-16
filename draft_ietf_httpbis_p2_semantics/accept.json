@@ -1,0 +1,37 @@
+[
+  [
+    "Generic",
+    "*/*;charset=utf-8;test=test;q=0.1",
+    {
+      "__type": "Accept",
+      "items": [
+        {
+          "media_range": {
+            "__type": "media_range",
+            "type": "*",
+            "subtype": "*",
+            "parameters": [
+              {
+                "__type": "parameter",
+                "attribute": "charset",
+                "value": "utf-8"
+              },
+              {
+                "__type": "parameter",
+                "attribute": "test",
+                "value": "test"
+              }
+            ]
+          },
+          "accept_params": [
+            {
+              "__type": "weight",
+              "attribute": "q",
+              "value": "0.1"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+]

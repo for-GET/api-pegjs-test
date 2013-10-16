@@ -1,0 +1,69 @@
+[
+  [
+    "Wildcard type and subtype",
+    "*/*",
+    {
+      "type": "*",
+      "subtype": "*",
+      "parameters": []
+    }
+  ], [
+    "Wildcard subtype",
+    "application/*",
+    {
+      "type": "application",
+      "subtype": "*",
+      "parameters": []
+    }
+  ], [
+    "Wildcard subtype, with parameters",
+    "application/*;charset=utf-8",
+    {
+      "type": "application",
+      "subtype": "*",
+      "parameters": [{
+        "__type": "parameter",
+        "attribute": "charset",
+        "value": "utf-8"
+      }]
+    }
+  ], [
+    "Whitespace is insignificant"
+    "application/*    ;    charset=utf-8",
+    {
+      "type": "application",
+      "subtype": "*",
+      "parameters": [{
+        "__type": "parameter",
+        "attribute": "charset",
+        "value": "utf-8"
+      }]
+    }
+  ], [
+    "Common",
+    "application/json",
+    {
+      "type": "application",
+      "subtype": "json",
+      "parameters": []
+    }
+  ], [
+    "Common",
+    "application/json;charset=utf-8",
+    {
+      "type": "application",
+      "subtype": "json",
+      "parameters": [{
+        "__type": "parameter",
+        "attribute": "charset",
+        "value": "utf-8"
+      }]
+    }
+  ], [
+    "Weight is not part of the media-range",
+    "*/*;q=0.1"
+  ], [
+    "Weight is not part of the media-range",
+    "application/json;q=1"
+  ]
+]

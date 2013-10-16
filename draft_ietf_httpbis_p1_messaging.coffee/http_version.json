@@ -1,0 +1,47 @@
+[
+  [
+    "Common",
+    "HTTP/0.9",
+    {
+        "__type": "version",
+        "major": "0",
+        "minor": "9"
+    }
+  ], [
+    "Common",
+    "HTTP/1.0",
+    {
+        "__type": "version",
+        "major": "1",
+        "minor": "0"
+    }
+  ], [
+    "Common",
+    "HTTP/1.1",
+    {
+        "__type": "version",
+        "major": "1",
+        "minor": "1"
+    }
+  ], [
+    "Common",
+    "HTTP/2.0",
+    {
+        "__type": "version",
+        "major": "2",
+        "minor": "0"
+    }
+  ], [
+    "No minor",
+    "HTTP/2"
+  ], [
+    "Multi-digit major",
+    "HTTP/10.0"
+  ], [
+    "Multi-digit minor",
+    "HTTP/0.10"
+  ], [
+    "Non-HTTP",
+    "FTP/1.0"
+  ]
+]

@@ -1,0 +1,11 @@
+[
+  [
+    "/foo/bar?foo=bar#foo=bar",
+    {
+      "__type": "relative_ref",
+      "path": "/foo/bar",
+      "query": "foo=bar",
+      "fragment": "foo=bar"
+    }
+  ]
+]

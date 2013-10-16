@@ -1,0 +1,16 @@
+[
+  [
+    "Common",
+    "HTTP/1.1 200 OK\r\n",
+    {
+        "__type": "response_line",
+        "version": {
+          "__type": "version",
+          "major": "1",
+          "minor": "1",
+        },
+        "status_code": "200",
+        "reason_phrase": "OK"
+    }
+  ]
+]

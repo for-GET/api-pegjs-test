@@ -1,0 +1,19 @@
+[
+  [
+    "Generic",
+    "deflate;q=0.1",
+    {
+      "__type": "Accept_Encoding",
+      "items": [
+        {
+          "encoding": "deflate",
+          "weight": {
+            "__type": "weight",
+            "attribute": "q",
+            "value": "0.1"
+          }
+        }
+      ]
+    }
+  ]
+]

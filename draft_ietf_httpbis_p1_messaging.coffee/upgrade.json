@@ -1,0 +1,42 @@
+[
+  [
+    "Common"
+    "HTTP/2.0",
+    {
+        "__type": "Upgrade",
+        "value": [{
+          "__type": "protocol",
+          "name": "HTTP",
+          "version": "2.0"
+        }]
+    }
+  ], [
+    "Common"
+    "websocket",
+    {
+        "__type": "Upgrade",
+        "value": [{
+          "__type": "protocol",
+          "name": "websocket"
+        }]
+    }
+  ], [
+    "Multiple protocols"
+    "HTTP/2.0,HTTP/1.1,websocket",
+    {
+        "__type": "Upgrade",
+        "value": [{
+          "__type": "protocol",
+          "name": "HTTP",
+          "version": "2.0"
+        }, {
+          "__type": "protocol",
+          "name": "HTTP",
+          "version": "1.1"
+        }, {
+          "__type": "protocol",
+          "name": "websocket"
+        }]
+    }
+  ]
+]

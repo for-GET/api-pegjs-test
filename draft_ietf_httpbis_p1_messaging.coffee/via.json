@@ -1,0 +1,45 @@
+[
+  [
+    "Generic",
+    "2.0 example.com (comment)",
+    {
+      "__type": "Via",
+      "items": [
+        {
+          "protocol": {
+            "__type": "received_protocol",
+            "name": "HTTP",
+            "version": "2.0"
+          },
+          "received_by": {
+            "__type": "received_by",
+            "hostname": "example.com"
+          },
+          "comment": {
+            "__type": "comment",
+            "value": "comment"
+          }
+        }
+      ]
+    }
+  ], [
+    "Common",
+    "HTTP/1.1 GWA",
+    {
+      "__type": "Via",
+      "items": [
+        {
+          "protocol": {
+            "__type": "received_protocol",
+            "name": "HTTP",
+            "version": "1.1"
+          },
+          "received_by": {
+            "__type": "received_by",
+            "pseudonym": "GWA"
+          }
+        }
+      ]
+    }
+  ]
+]

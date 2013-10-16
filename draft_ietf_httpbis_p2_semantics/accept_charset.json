@@ -1,0 +1,19 @@
+[
+  [
+    "Generic",
+    "*;q=0.1",
+    {
+      "__type": "Accept_Charset",
+      "items": [
+        {
+          "charset": "*",
+          "weight": {
+            "__type": "weight",
+            "attribute": "q",
+            "value": "0.1"
+          }
+        }
+      ]
+    }
+  ]
+]
