@@ -8,7 +8,6 @@
         {
           "protocol": {
             "__type": "received_protocol",
-            "name": "HTTP",
             "version": "2.0"
           },
           "received_by": {
