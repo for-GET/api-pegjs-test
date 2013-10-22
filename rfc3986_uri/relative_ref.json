@@ -1,5 +1,6 @@
 [
   [
+    "Generic",
     "/foo/bar?foo=bar#foo=bar",
     {
       "__type": "relative_ref",

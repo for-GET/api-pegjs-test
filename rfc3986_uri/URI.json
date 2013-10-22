@@ -1,5 +1,6 @@
 [
   [
+    "Generic",
     "http://127.0.0.1:80/qwe?qwe=qwe#qwe=qwe",
     {
       "__type": "URI",
