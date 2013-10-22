@@ -6,6 +6,7 @@
       "__type": "Accept_Language",
       "items": [
         {
+          "__type": "Accept_Language_item_",
           "language_range": "de-de",
           "weight": {
             "__type": "weight",

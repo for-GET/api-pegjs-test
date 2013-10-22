@@ -3,6 +3,7 @@
     "Wildcard type and subtype",
     "*/*",
     {
+      "__type": "media_range",
       "type": "*",
       "subtype": "*",
       "parameters": []
@@ -11,6 +12,7 @@
     "Wildcard subtype",
     "application/*",
     {
+      "__type": "media_range",
       "type": "application",
       "subtype": "*",
       "parameters": []
@@ -19,6 +21,7 @@
     "Wildcard subtype, with parameters",
     "application/*;charset=utf-8",
     {
+      "__type": "media_range",
       "type": "application",
       "subtype": "*",
       "parameters": [{
@@ -31,6 +34,7 @@
     "Whitespace is insignificant",
     "application/*    ;    charset=utf-8",
     {
+      "__type": "media_range",
       "type": "application",
       "subtype": "*",
       "parameters": [{
@@ -43,6 +47,7 @@
     "Common",
     "application/json",
     {
+      "__type": "media_range",
       "type": "application",
       "subtype": "json",
       "parameters": []
@@ -51,6 +56,7 @@
     "Common",
     "application/json;charset=utf-8",
     {
+      "__type": "media_range",
       "type": "application",
       "subtype": "json",
       "parameters": [{

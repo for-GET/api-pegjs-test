@@ -6,6 +6,7 @@
       "__type": "Accept_Encoding",
       "items": [
         {
+          "__type": "Accept_Encoding_item_",
           "encoding": "deflate",
           "weight": {
             "__type": "weight",

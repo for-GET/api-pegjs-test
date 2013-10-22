@@ -6,6 +6,7 @@
       "__type": "Accept_Charset",
       "items": [
         {
+          "__type": "Accept_Charset_item_",
           "charset": "*",
           "weight": {
             "__type": "weight",
