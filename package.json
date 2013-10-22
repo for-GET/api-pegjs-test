@@ -1,0 +1,25 @@
+{
+  "name": "api-pegjs-test",
+  "description": "A collection of language-agnostic tests in JSON format for parsing HTTP into api-pegjs",
+  "keywords": [
+    "http",
+    "rfc",
+    "json",
+    "pegjs",
+    "peg",
+    "ast",
+    "conneg",
+    "caching"
+  ],
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/for-GET/api-pegjs-test.git"
+  },
+  "licenses": [
+    {
+      "type": "Apache-2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0"
+    }
+  ]
+}
