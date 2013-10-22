@@ -28,7 +28,7 @@
       }]
     }
   ], [
-    "Whitespace is insignificant"
+    "Whitespace is insignificant",
     "application/*    ;    charset=utf-8",
     {
       "type": "application",
