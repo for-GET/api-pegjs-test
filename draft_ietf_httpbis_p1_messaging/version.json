@@ -3,7 +3,7 @@
     "Common",
     "HTTP/0.9",
     {
-        "__type": "version",
+        "__type": "HTTP_version",
         "major": "0",
         "minor": "9"
     }
@@ -11,7 +11,7 @@
     "Common",
     "HTTP/1.0",
     {
-        "__type": "version",
+        "__type": "HTTP_version",
         "major": "1",
         "minor": "0"
     }
@@ -19,7 +19,7 @@
     "Common",
     "HTTP/1.1",
     {
-        "__type": "version",
+        "__type": "HTTP_version",
         "major": "1",
         "minor": "1"
     }
@@ -27,7 +27,7 @@
     "Common",
     "HTTP/2.0",
     {
-        "__type": "version",
+        "__type": "HTTP_version",
         "major": "2",
         "minor": "0"
     }

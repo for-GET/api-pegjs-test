@@ -3,9 +3,9 @@
     "Common",
     "HTTP/1.1 200 OK\r\n",
     {
-        "__type": "response_line",
+        "__type": "status_line",
         "version": {
-          "__type": "version",
+          "__type": "HTTP_version",
           "major": "1",
           "minor": "1"
         },
