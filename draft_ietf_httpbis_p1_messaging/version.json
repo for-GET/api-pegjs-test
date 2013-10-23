@@ -1,6 +1,6 @@
 [
   [
-    "Common",
+    "Common (HTTP/0.9)",
     "HTTP/0.9",
     {
         "__type": "HTTP_version",
@@ -8,7 +8,7 @@
         "minor": "9"
     }
   ], [
-    "Common",
+    "Common (HTTP/1.0)",
     "HTTP/1.0",
     {
         "__type": "HTTP_version",
@@ -16,7 +16,7 @@
         "minor": "0"
     }
   ], [
-    "Common",
+    "Common (HTTP/1.1)",
     "HTTP/1.1",
     {
         "__type": "HTTP_version",
@@ -24,7 +24,7 @@
         "minor": "1"
     }
   ], [
-    "Common",
+    "Common (HTTP/2.0)",
     "HTTP/2.0",
     {
         "__type": "HTTP_version",
@@ -35,10 +35,10 @@
     "No minor",
     "HTTP/2"
   ], [
-    "Multi-digit major",
+    "No multi-digit major",
     "HTTP/10.0"
   ], [
-    "Multi-digit minor",
+    "No multi-digit minor",
     "HTTP/0.10"
   ], [
     "Non-HTTP",

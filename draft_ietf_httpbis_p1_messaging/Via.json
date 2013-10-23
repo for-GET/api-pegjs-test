@@ -22,7 +22,7 @@
       ]
     }
   ], [
-    "Common",
+    "Common (GWA)",
     "HTTP/1.1 GWA",
     {
       "__type": "Via",
@@ -35,7 +35,7 @@
           },
           "received_by": {
             "__type": "received_by",
-            "pseudonym": "GWA"
+            "hostname": "GWA"
           }
         }
       ]
