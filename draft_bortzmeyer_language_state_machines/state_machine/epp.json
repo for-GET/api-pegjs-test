@@ -1,0 +1,183 @@
+{
+  "__type": "state_machine",
+  "statements": [
+    {
+      "__type": "declaration",
+      "names": [
+        "Waiting for client",
+        "Prepare greeting",
+        "End session",
+        "Waiting for client authentication",
+        "Processing login",
+        "Prepare fail response",
+        "Prepare response",
+        "Waiting for command",
+        "Processing command"
+      ],
+      "value": "STATE"
+    },
+    {
+      "__type": "declaration",
+      "names": [
+        "Connected or hello",
+        "Close connection or idle",
+        "Send greeting",
+        "login received",
+        "Send response",
+        "Timeout",
+        "Auth fail",
+        "Auth OK",
+        "Command received",
+        "Command processed",
+        "Send X5xx response",
+        "Send 2501 response"
+      ],
+      "value": "MESSAGE"
+    },
+    {
+      "__type": "assignment",
+      "name": "Initial",
+      "value": "Waiting for client"
+    },
+    {
+      "__type": "transition",
+      "states": [
+        "Waiting for client"
+      ],
+      "messages": [
+        "Connected or hello"
+      ],
+      "next_state": "Prepare greeting"
+    },
+    {
+      "__type": "transition",
+      "states": [
+        "End session"
+      ],
+      "messages": [
+        "Close connection or idle"
+      ],
+      "next_state": "Waiting for client"
+    },
+    {
+      "__type": "transition",
+      "states": [
+        "Prepare greeting"
+      ],
+      "messages": [
+        "Send greeting"
+      ],
+      "next_state": "Waiting for client authentication"
+    },
+    {
+      "__type": "transition",
+      "states": [
+        "Waiting for client authentication"
+      ],
+      "messages": [
+        "Timeout"
+      ],
+      "next_state": "End session"
+    },
+    {
+      "__type": "transition",
+      "states": [
+        "Waiting for client authentication"
+      ],
+      "messages": [
+        "login received"
+      ],
+      "next_state": "Processing login"
+    },
+    {
+      "__type": "transition",
+      "states": [
+        "Processing login"
+      ],
+      "messages": [
+        "Auth fail"
+      ],
+      "next_state": "Prepare fail response"
+    },
+    {
+      "__type": "transition",
+      "states": [
+        "Prepare fail response"
+      ],
+      "messages": [
+        "Send response"
+      ],
+      "next_state": "Waiting for client authentication"
+    },
+    {
+      "__type": "transition",
+      "states": [
+        "Processing login"
+      ],
+      "messages": [
+        "Auth OK"
+      ],
+      "next_state": "Waiting for command"
+    },
+    {
+      "__type": "transition",
+      "states": [
+        "Waiting for command"
+      ],
+      "messages": [
+        "Timeout"
+      ],
+      "next_state": "End session"
+    },
+    {
+      "__type": "transition",
+      "states": [
+        "Prepare response"
+      ],
+      "messages": [
+        "Send response"
+      ],
+      "next_state": "Waiting for command"
+    },
+    {
+      "__type": "transition",
+      "states": [
+        "Processing command"
+      ],
+      "messages": [
+        "Command processed"
+      ],
+      "next_state": "Prepare response"
+    },
+    {
+      "__type": "transition",
+      "states": [
+        "Waiting for command"
+      ],
+      "messages": [
+        "Command received"
+      ],
+      "next_state": "Processing command"
+    },
+    {
+      "__type": "transition",
+      "states": [
+        "Prepare response"
+      ],
+      "messages": [
+        "Send X5xx response"
+      ],
+      "next_state": "End session"
+    },
+    {
+      "__type": "transition",
+      "states": [
+        "Prepare fail response"
+      ],
+      "messages": [
+        "Send 2501 response"
+      ],
+      "next_state": "End session"
+    }
+  ]
+}

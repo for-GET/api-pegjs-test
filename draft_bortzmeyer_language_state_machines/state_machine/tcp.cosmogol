@@ -1,0 +1,54 @@
+# http://tools.ietf.org/html/draft-bortzmeyer-language-state-machines#appendix-A
+# The TCP state machine, from RFC 793 [3].
+
+# The TCP state machine. RFC 793 3.2 "Terminology"
+
+Title = "Transmission Control Protocol";
+
+SYN-RCVD, SYN-SENT, FIN-WAIT-1, FIN-WAIT-2, ESTAB,
+      CLOSING, TIME-WAIT, CLOSED, CLOSE-WAIT,
+      LISTEN, LAST-ACK : STATE;
+
+CLOSE, passive-OPEN, active-OPEN ,
+      rcv-SYN, rcv-ACK-of-FIN, rcv-ACK-of-SYN, rcv-SYN-ACK,
+      rcv-FIN, SEND, Timeout : MESSAGE;
+
+LISTEN : CLOSE -> CLOSED : Delete-TCB ;
+# ALTERNATIVE syntax:
+# CLOSE: LISTEN -> CLOSED : Delete-TCB ;
+# ALTERNATIVE syntax:
+# (LISTEN, CLOSE) -> CLOSED : Delete-TCB ;
+
+CLOSED : passive-OPEN  -> LISTEN : Create-TCB;
+
+LISTEN : rcv-SYN -> SYN-RCVD;
+
+SYN-RCVD : CLOSE -> FIN-WAIT-1;
+
+FIN-WAIT-1: rcv-ACK-of-FIN -> FIN-WAIT-2;
+
+FIN-WAIT-1: rcv-FIN -> CLOSING;
+
+FIN-WAIT-2 : rcv-FIN -> TIME-WAIT;
+
+CLOSING : rcv-ACK-of-FIN -> TIME-WAIT;
+
+CLOSED : active-OPEN -> SYN-SENT;
+
+LISTEN : SEND -> SYN-SENT;
+
+SYN-SENT : rcv-SYN -> SYN-RCVD;
+
+SYN-RCVD : rcv-ACK-of-SYN -> ESTAB;
+
+SYN-SENT : rcv-SYN-ACK-> ESTAB;
+
+ESTAB : CLOSE -> FIN-WAIT-1;
+
+ESTAB : rcv-FIN -> CLOSE-WAIT;
+
+CLOSE-WAIT : CLOSE -> LAST-ACK;
+
+TIME-WAIT : Timeout -> CLOSED;
+
+LAST-ACK : rcv-ACK-of-FIN -> CLOSED;

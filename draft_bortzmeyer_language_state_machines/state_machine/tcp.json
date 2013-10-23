@@ -1,0 +1,225 @@
+{
+  "__type": "state_machine",
+  "statements": [
+    {
+      "__type": "assignment",
+      "name": "Title",
+      "value": "Transmission Control Protocol"
+    },
+    {
+      "__type": "declaration",
+      "names": [
+        "SYN-RCVD",
+        "SYN-SENT",
+        "FIN-WAIT-1",
+        "FIN-WAIT-2",
+        "ESTAB",
+        "CLOSING",
+        "TIME-WAIT",
+        "CLOSED",
+        "CLOSE-WAIT",
+        "LISTEN",
+        "LAST-ACK"
+      ],
+      "value": "STATE"
+    },
+    {
+      "__type": "declaration",
+      "names": [
+        "CLOSE",
+        "passive-OPEN",
+        "active-OPEN",
+        "rcv-SYN",
+        "rcv-ACK-of-FIN",
+        "rcv-ACK-of-SYN",
+        "rcv-SYN-ACK",
+        "rcv-FIN",
+        "SEND",
+        "Timeout"
+      ],
+      "value": "MESSAGE"
+    },
+    {
+      "__type": "transition",
+      "states": [
+        "LISTEN"
+      ],
+      "messages": [
+        "CLOSE"
+      ],
+      "next_state": "CLOSED",
+      "action": "Delete-TCB"
+    },
+    {
+      "__type": "transition",
+      "states": [
+        "CLOSED"
+      ],
+      "messages": [
+        "passive-OPEN"
+      ],
+      "next_state": "LISTEN",
+      "action": "Create-TCB"
+    },
+    {
+      "__type": "transition",
+      "states": [
+        "LISTEN"
+      ],
+      "messages": [
+        "rcv-SYN"
+      ],
+      "next_state": "SYN-RCVD"
+    },
+    {
+      "__type": "transition",
+      "states": [
+        "SYN-RCVD"
+      ],
+      "messages": [
+        "CLOSE"
+      ],
+      "next_state": "FIN-WAIT-1"
+    },
+    {
+      "__type": "transition",
+      "states": [
+        "FIN-WAIT-1"
+      ],
+      "messages": [
+        "rcv-ACK-of-FIN"
+      ],
+      "next_state": "FIN-WAIT-2"
+    },
+    {
+      "__type": "transition",
+      "states": [
+        "FIN-WAIT-1"
+      ],
+      "messages": [
+        "rcv-FIN"
+      ],
+      "next_state": "CLOSING"
+    },
+    {
+      "__type": "transition",
+      "states": [
+        "FIN-WAIT-2"
+      ],
+      "messages": [
+        "rcv-FIN"
+      ],
+      "next_state": "TIME-WAIT"
+    },
+    {
+      "__type": "transition",
+      "states": [
+        "CLOSING"
+      ],
+      "messages": [
+        "rcv-ACK-of-FIN"
+      ],
+      "next_state": "TIME-WAIT"
+    },
+    {
+      "__type": "transition",
+      "states": [
+        "CLOSED"
+      ],
+      "messages": [
+        "active-OPEN"
+      ],
+      "next_state": "SYN-SENT"
+    },
+    {
+      "__type": "transition",
+      "states": [
+        "LISTEN"
+      ],
+      "messages": [
+        "SEND"
+      ],
+      "next_state": "SYN-SENT"
+    },
+    {
+      "__type": "transition",
+      "states": [
+        "SYN-SENT"
+      ],
+      "messages": [
+        "rcv-SYN"
+      ],
+      "next_state": "SYN-RCVD"
+    },
+    {
+      "__type": "transition",
+      "states": [
+        "SYN-RCVD"
+      ],
+      "messages": [
+        "rcv-ACK-of-SYN"
+      ],
+      "next_state": "ESTAB"
+    },
+    {
+      "__type": "transition",
+      "states": [
+        "SYN-SENT"
+      ],
+      "messages": [
+        "rcv-SYN-ACK"
+      ],
+      "next_state": "ESTAB"
+    },
+    {
+      "__type": "transition",
+      "states": [
+        "ESTAB"
+      ],
+      "messages": [
+        "CLOSE"
+      ],
+      "next_state": "FIN-WAIT-1"
+    },
+    {
+      "__type": "transition",
+      "states": [
+        "ESTAB"
+      ],
+      "messages": [
+        "rcv-FIN"
+      ],
+      "next_state": "CLOSE-WAIT"
+    },
+    {
+      "__type": "transition",
+      "states": [
+        "CLOSE-WAIT"
+      ],
+      "messages": [
+        "CLOSE"
+      ],
+      "next_state": "LAST-ACK"
+    },
+    {
+      "__type": "transition",
+      "states": [
+        "TIME-WAIT"
+      ],
+      "messages": [
+        "Timeout"
+      ],
+      "next_state": "CLOSED"
+    },
+    {
+      "__type": "transition",
+      "states": [
+        "LAST-ACK"
+      ],
+      "messages": [
+        "rcv-ACK-of-FIN"
+      ],
+      "next_state": "CLOSED"
+    }
+  ]
+}

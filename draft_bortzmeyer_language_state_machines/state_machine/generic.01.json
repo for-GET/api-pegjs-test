@@ -1,0 +1,17 @@
+{
+    "__type": "state_machine",
+    "statements": [
+      {"__type": "assignment", "name": "var1", "value": "test"},
+      {"__type": "assignment", "name": "var2", "value": "test2"},
+      {"__type": "declaration", "names": ["state1", "state2"], "value": "states"},
+      {"__type": "declaration", "names": ["msg"], "value": "messages"},
+      {"__type": "declaration", "names": ["act"], "value": "actions"},
+      {
+        "__type": "transition",
+        "states": ["state1"],
+        "messages": ["msg"],
+        "next_state": "state2",
+        "action": "act"
+      }
+    ]
+}

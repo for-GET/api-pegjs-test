@@ -1,0 +1,54 @@
+# http://tools.ietf.org/html/draft-bortzmeyer-language-state-machines#appendix-A
+# The EPP state machine, from RFC 3730 [6].
+
+# Extensible Provisioning Protocol (EPP)
+
+"Waiting for client", "Prepare greeting", "End session",
+"Waiting for client authentication", "Processing login",
+"Prepare fail response", "Prepare response",
+"Waiting for command", "Processing command": STATE;
+
+"Connected or hello", "Close connection or idle",
+"Send greeting", "login received", "Send response",
+Timeout, "Auth fail",
+"Auth OK", "Command received",
+"Command processed", "Send X5xx response",
+"Send 2501 response": MESSAGE;
+
+Initial = "Waiting for client";
+
+"Waiting for client": "Connected or hello" -> "Prepare greeting";
+
+"End session" : "Close connection or idle" ->
+             "Waiting for client";
+
+"Prepare greeting": "Send greeting"->
+            "Waiting for client authentication";
+
+# "Waiting for client authentication":Timeout :  -> "End session";
+"Waiting for client authentication":Timeout   -> "End session";
+
+"Waiting for client authentication" : "login received"->
+              "Processing login";
+
+"Processing login": "Auth fail"  -> "Prepare fail response";
+
+"Prepare fail response":"Send response" ->
+"Waiting for client authentication";
+
+"Processing login": "Auth OK" -> "Waiting for command";
+
+"Waiting for command": Timeout -> "End session";
+
+"Prepare response" : "Send response" -> "Waiting for command";
+
+"Processing command" : "Command processed" ->
+               "Prepare response";
+
+"Waiting for command" : "Command received"  ->
+               "Processing command";
+
+"Prepare response" : "Send X5xx response" -> "End session";
+
+"Prepare fail response" : "Send 2501 response"->
+               "End session";

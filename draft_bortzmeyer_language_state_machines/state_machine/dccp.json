@@ -1,0 +1,157 @@
+{
+  "__type": "state_machine",
+  "statements": [
+    {
+      "__type": "declaration",
+      "names": [
+        "CLOSED",
+        "LISTEN",
+        "REQUEST",
+        "RESPOND",
+        "OPEN",
+        "PARTOPEN",
+        "CLOSING",
+        "TIMEWAIT",
+        "CLOSEREQ"
+      ],
+      "value": "STATE"
+    },
+    {
+      "__type": "declaration",
+      "names": [
+        "Passive-open",
+        "Active-open",
+        "Receive-ack",
+        "Receive-reset",
+        "Server-active-close",
+        "Active-close",
+        "Receive-packet",
+        "Receive-response",
+        "Receive-request",
+        "Timer-expires",
+        "Receive-close"
+      ],
+      "value": "MESSAGE"
+    },
+    {
+      "__type": "transition",
+      "states": [
+        "CLOSED"
+      ],
+      "messages": [
+        "Passive-open"
+      ],
+      "next_state": "LISTEN"
+    },
+    {
+      "__type": "transition",
+      "states": [
+        "LISTEN"
+      ],
+      "messages": [
+        "Receive-request"
+      ],
+      "next_state": "RESPOND"
+    },
+    {
+      "__type": "transition",
+      "states": [
+        "RESPOND"
+      ],
+      "messages": [
+        "Receive-ack"
+      ],
+      "next_state": "OPEN"
+    },
+    {
+      "__type": "transition",
+      "states": [
+        "CLOSING"
+      ],
+      "messages": [
+        "Receive-reset"
+      ],
+      "next_state": "TIMEWAIT"
+    },
+    {
+      "__type": "transition",
+      "states": [
+        "OPEN"
+      ],
+      "messages": [
+        "Server-active-close"
+      ],
+      "next_state": "CLOSEREQ"
+    },
+    {
+      "__type": "transition",
+      "states": [
+        "CLOSEREQ"
+      ],
+      "messages": [
+        "Receive-close"
+      ],
+      "next_state": "CLOSED"
+    },
+    {
+      "__type": "transition",
+      "states": [
+        "OPEN"
+      ],
+      "messages": [
+        "Active-close"
+      ],
+      "next_state": "CLOSING"
+    },
+    {
+      "__type": "transition",
+      "states": [
+        "REQUEST"
+      ],
+      "messages": [
+        "Receive-response"
+      ],
+      "next_state": "PARTOPEN"
+    },
+    {
+      "__type": "transition",
+      "states": [
+        "PARTOPEN"
+      ],
+      "messages": [
+        "Receive-packet"
+      ],
+      "next_state": "OPEN"
+    },
+    {
+      "__type": "transition",
+      "states": [
+        "CLOSED"
+      ],
+      "messages": [
+        "Active-open"
+      ],
+      "next_state": "REQUEST"
+    },
+    {
+      "__type": "transition",
+      "states": [
+        "TIMEWAIT"
+      ],
+      "messages": [
+        "Timer-expires"
+      ],
+      "next_state": "CLOSED"
+    },
+    {
+      "__type": "transition",
+      "states": [
+        "OPEN"
+      ],
+      "messages": [
+        "Receive-close"
+      ],
+      "next_state": "CLOSED"
+    }
+  ]
+}

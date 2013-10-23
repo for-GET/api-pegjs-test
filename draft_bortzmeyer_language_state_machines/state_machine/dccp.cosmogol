@@ -1,0 +1,36 @@
+# http://tools.ietf.org/html/draft-bortzmeyer-language-state-machines#appendix-A
+# The DCCP state machine, from RFC 4340 [8].
+
+# RFC 4340, 8.4. "DCCP State Diagram"
+
+CLOSED, LISTEN, REQUEST, RESPOND, OPEN, PARTOPEN, CLOSING, TIMEWAIT,
+CLOSEREQ : STATE;
+
+Passive-open, Active-open, Receive-ack, Receive-reset,
+Server-active-close, Active-close, Receive-packet,
+Receive-response,
+Receive-request, Timer-expires, Receive-close : MESSAGE;
+
+CLOSED : Passive-open ->LISTEN;
+
+LISTEN : Receive-request ->RESPOND;
+
+RESPOND: Receive-ack ->OPEN;
+
+CLOSING : Receive-reset ->TIMEWAIT;
+
+OPEN : Server-active-close->CLOSEREQ;
+
+CLOSEREQ : Receive-close ->CLOSED;
+
+OPEN : Active-close  ->CLOSING;
+
+REQUEST : Receive-response->PARTOPEN;
+
+PARTOPEN : Receive-packet ->OPEN;
+
+CLOSED : Active-open->REQUEST;
+
+TIMEWAIT : Timer-expires -> CLOSED;
+
+OPEN: Receive-close ->CLOSED;
