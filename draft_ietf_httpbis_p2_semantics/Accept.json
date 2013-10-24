@@ -124,5 +124,75 @@
         }
       ]
     }
+  ], [
+    "Common (Chrome 30)",
+    "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+    {
+      "__type": "Accept",
+      "items": [
+        {
+          "__type": "Accept_item_",
+          "media_range": {
+            "__type": "media_range",
+            "type": "text",
+            "subtype": "html",
+            "parameters": []
+          },
+          "accept_params": []
+        },
+        {
+          "__type": "Accept_item_",
+          "media_range": {
+            "__type": "media_range",
+            "type": "application",
+            "subtype": "xhtml+xml",
+            "parameters": []
+          },
+          "accept_params": []
+        },
+        {
+          "__type": "Accept_item_",
+          "media_range": {
+            "__type": "media_range",
+            "type": "application",
+            "subtype": "xml",
+            "parameters": []
+          },
+          "accept_params": [
+            {
+              "__type": "weight",
+              "attribute": "q",
+              "value": "0.9"
+            }
+          ]
+        },
+        {
+          "__type": "Accept_item_",
+          "media_range": {
+            "__type": "media_range",
+            "type": "image",
+            "subtype": "webp",
+            "parameters": []
+          },
+          "accept_params": []
+        },
+        {
+          "__type": "Accept_item_",
+          "media_range": {
+            "__type": "media_range",
+            "type": "*",
+            "subtype": "*",
+            "parameters": []
+          },
+          "accept_params": [
+            {
+              "__type": "weight",
+              "attribute": "q",
+              "value": "0.8"
+            }
+          ]
+        }
+      ]
+    }
   ]
 ]

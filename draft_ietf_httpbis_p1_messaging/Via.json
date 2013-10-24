@@ -12,11 +12,35 @@
           },
           "received_by": {
             "__type": "received_by",
-            "hostname": "example.com"
+            "hostname": {
+              "__type": "uri_host",
+              "reg_name": "example.com"
+            }
           },
           "comment": {
             "__type": "comment",
             "value": "comment"
+          }
+        }
+      ]
+    }
+  ], [
+    "Generic",
+    "1.1 example.com",
+    {
+      "__type": "Via",
+      "items": [
+        {
+          "protocol": {
+            "__type": "received_protocol",
+            "version": "1.1"
+          },
+          "received_by": {
+            "__type": "received_by",
+            "hostname": {
+              "__type": "uri_host",
+              "reg_name": "example.com"
+            }
           }
         }
       ]
@@ -35,7 +59,10 @@
           },
           "received_by": {
             "__type": "received_by",
-            "hostname": "GWA"
+            "hostname": {
+              "__type": "uri_host",
+              "reg_name": "GWA"
+            }
           }
         }
       ]

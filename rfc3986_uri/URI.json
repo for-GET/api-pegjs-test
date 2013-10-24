@@ -8,7 +8,14 @@
       "slashes": "//",
       "authority": {
         "__type": "authority",
-        "hostname": "127.0.0.1",
+        "hostname": {
+           "__type": "uri_host",
+           "ip": {
+              "__type": "IPv4address",
+              "version": "4",
+              "address": "127.0.0.1"
+            }
+        },
         "port": "80"
       },
       "path": "/qwe",
