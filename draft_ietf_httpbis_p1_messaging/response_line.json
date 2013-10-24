@@ -1,6 +1,6 @@
 [
   [
-    "Common (200)",
+    "Common",
     "HTTP/1.1 200 OK\r\n",
     {
         "__type": "status_line",

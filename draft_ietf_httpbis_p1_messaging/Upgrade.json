@@ -1,6 +1,6 @@
 [
   [
-    "Common (HTTP/2.0)",
+    "Common",
     "HTTP/2.0",
     {
         "__type": "Upgrade",
@@ -11,7 +11,7 @@
         }]
     }
   ], [
-    "Common (websocket)",
+    "Common",
     "websocket",
     {
         "__type": "Upgrade",
