@@ -1,13 +1,15 @@
 # API PEGjs tests
 
-A collection of language-agnostic tests in JSON format for parsing HTTP into [api-pegjs](https://github.com/for-GET/api-pegjs)' AST.
+A collection of language-agnostic tests in JSON format for parsing into and generating from [api-pegjs](https://github.com/for-GET/api-pegjs)' AST.
+
+**This is part of a bigger effort: [for-GET HTTP](https://github.com/for-GET/README).**
 
 
 ## Structure
 
 Each specification has its own folder with test suites.
 
-Each ABNF rule in the specification has its own test suite as JSON file.
+Each ABNF rule in the specification has its own test suite as a JSON file.
 
 Each JSON file is an array of test cases.
 
